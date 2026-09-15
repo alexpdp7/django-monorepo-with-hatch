@@ -1,0 +1,12 @@
+# Root pyproject.toml
+[project]
+name = "djmh"
+version = "1.0.0"
+
+[tool.hatch.envs.default]
+workspace.members = ["packages/*"]
+workspace.parallel = true
+dependencies = ["pytest"]
+
+[tool.hatch.envs.dj.env-vars]
+DJANGO_SETTINGS_MODULE = "dj.settings"

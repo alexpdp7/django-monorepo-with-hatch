@@ -1,0 +1,10 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dj"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["Django~=6.1"]
+version = "0.0.0"
