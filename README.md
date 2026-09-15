@@ -16,3 +16,8 @@ hatch run dj:django-admin startapp myapp packages/dj/src/dj/myapp
 $EDITOR packages/dj/src/dj/myapp/apps.py  # fix name to be dj.myapp
 $EDITOR packages/dj/src/dj/settings.py    # add dj.myapp to INSTALLED_APPS
 ```
+
+## Caveats
+
+pytest is configured so that all tests in the workspace run with `hatch run pytest`.
+This would not account for multiple Django projects, this command uses a single `DJANGO_SETTINGS_MODULE` variable.
