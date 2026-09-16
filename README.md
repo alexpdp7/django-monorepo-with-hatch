@@ -21,3 +21,5 @@ $EDITOR packages/dj/src/dj/settings.py    # add dj.myapp to INSTALLED_APPS
 
 pytest is configured so that all tests in the workspace run with `hatch run pytest`.
 This would not account for multiple Django projects, this command uses a single `DJANGO_SETTINGS_MODULE` variable.
+
+[Basedpyright does not autodetect the Hatch environments, so code completion and others do not work. A workaround is to create a plain virtualenv at `.venv` that basedpyright will use.](https://github.com/DetachHead/basedpyright/issues/1889)
